@@ -1,0 +1,19 @@
+{
+    "remotePath": "/home/karel/docker/www.karel-kroeze.nl/",
+    "host": "82.196.2.39",
+    "username": "root",
+    "password": "",
+    "port": 22,
+    "secure": true,
+    "protocol": "sftp",
+    "uploadOnSave": true,
+    "passive": false,
+    "debug": true,
+    "privateKeyPath": "C:/Users/karel/Dropbox/Secrets/do-private.ppk",
+    "passphrase": "l2032",
+    "ignore": [
+        "\\.vscode",
+        "\\.git",
+        "\\.DS_Store"
+    ]
+}

@@ -1,0 +1,156 @@
+@import underline
+@import spinner
+
+// colours
+bgColor = #222
+textColor = #eee
+blue = #255E69
+red = #AA4439
+orange = #AA7039
+green = #2B803E
+
+// clickable
+clickable(colour)
+  color colour
+  position relative
+  &:hover
+    color lighten( colour, 10 )
+  &:active
+    color lighten( colour, 20 )
+
+shadow(size, blur = 0, spread = 0, colour = darken(bgColor, 10%) )
+  -webkit-box-shadow: size size blur spread colour;
+  -moz-box-shadow: size size blur spread colour;
+  box-shadow: size size blur spread colour;
+
+.darker
+  background-color darken( bgColor, 10 )
+
+.margin-top-10
+   margin-top: 10%
+
+.margin-bottom-10px
+  margin-bottom 10px
+
+body
+  color textColor
+  background bgColor
+
+a
+  text-decoration none
+  position relative
+
+a:not(".clickable")
+  linkUnderlines bgColor, #6FC5D6
+  &:hover, &:active
+    linkUnderlines bgColor, #609399
+
+.align-to-bottom
+  margin-bottom 0
+  margin-top 20px
+
+.slug
+  border-radius 10px
+  padding 15px
+  shadow(3px)
+  background-color textColor
+  &.blue
+    background-color blue
+  &.red
+    background-color red
+  &.orange
+    background-color orange
+  &.green
+    background-color green
+    
+#selector
+  position absolute
+  top 0
+  right -36px
+  width 0
+  height 0
+  background-color transparent
+  border 23px solid transparent
+  .blue ^[0]
+    border-right-color blue
+  .red ^[0]
+    border-right-color red
+  .orange ^[0]
+    border-right-color orange
+  .green ^[0]
+    border-right-color green
+
+.content
+  border-color transparent
+  border-left-style solid
+  border-left-width 5px
+  padding-left 10px
+  margin-left -5px
+  &.blue
+    border-color blue
+  &.red
+    border-color red
+  &.orange
+    border-color orange
+  &.green
+    border-color green
+
+// clickable buttons
+.clickable 
+  text-decoration none
+  clickable( textColor )
+  &.blue
+    clickable( blue )
+  &.red
+    clickable( red )
+  &.orange
+    clickable( orange )
+  &.green
+    clickable( green )
+
+.center
+  text-align center
+  margin inherit auto
+  width 100%
+  display block
+
+.right
+  margin-left auto
+  width 100%
+  display block
+
+.mugshot
+  width 100%
+  border-radius 50%
+  overflow hidden
+  position relative
+  display inline-block
+
+  // 1:1 ratio by css 'hack'
+  &:after 
+    content: '';
+    display: block;
+    margin-top: 100%;
+  
+  fill(margin)
+    position absolute
+    top margin
+    bottom margin
+    left margin
+    right margin
+
+  // border
+  .rainbow-border
+    fill(0)
+    spinner(10s)
+    border-radius 50%
+    border-style solid
+    border-width 5px
+    border-color blue red orange green
+    transform rotate(45deg)
+  
+  // image
+  img
+    fill(1px)
+    height 100%
+

@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Karel Kroeze</title>
+  <meta name="description" content="Personal website of Karel Kroeze">
+  <meta name="author" content="Karel Kroeze">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Raleway:400,300,600" type="text/css" />
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" type="text/css" />
+  <link rel="stylesheet" href="css/normalize.css" type="text/css" />
+  <link rel="stylesheet" href="css/skeleton.css" type="text/css" />
+
+  <!-- tooltips -->
+  <link rel="stylesheet" href="css/tooltipster.core.min.css" />
+  <link rel="stylesheet" href="css/tooltipster-follower.min.css" />
+  <link rel="stylesheet" href="css/tooltipster-sideTip-borderless.min.css" />
+
+  <!-- custom css -->
+  <link rel="stylesheet" href="css/style.css" type="text/css" />
+  <link rel="icon" type="image/png" href="images/favicon.png">
+</head>
+<body>
+  <div class="container">
+    <div class="row margin-top-10">
+      <div class="three columns mugshot center margin-top-10">
+        <img src="images/mugshot.png" />
+        <div class="rainbow-border"> </div>   
+      </div>
+      <div class="one column margin-top-10">
+        <div class="row mainbuttons">
+          <a onclick="toggleContent('contacts', this)" title="Contact information"><li class="fa fa-fw margin-bottom-10px clickable center blue fa-3x fa-address-card"></li></a>
+          <a onclick="toggleContent('cv', this)" title="Curriculum Vitae"><li class="fa fa-fw margin-bottom-10px clickable center red fa-3x fa-graduation-cap"></li></a>
+          <a onclick="toggleContent('publications', this)" title="Publications"><li class="fa fa-fw margin-bottom-10px clickable center orange fa-3x fa-file-text"></li></a>
+          <a onclick="toggleContent('projects', this)" title="Projects &amp; Hobbies"><li class="fa fa-fw margin-bottom-10px clickable center green fa-3x fa-puzzle-piece"></li></a>
+        </div>
+      </div>
+      <div class="eight columns">    
+        <div id="content"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- selector arrow -->
+  <div id="selector"></div>
+
+  <!-- other content screens -->
+  <span style="display: none;">
+    <div id="welcome" class="content">
+      <h1>Hi!</h1>
+      <p>My name is Karel Kroeze, and I'm a computational statistician with a broad range of interests.</p>
+      <p>I'm doing my PhD at the <a href="https://utwente.nl" title="University of Twente">University of Twente</a>, where I try to make online learning environments smarter.</p>
+      <p>In my spare time, I enjoy tinkering with technology. That includes this website, creating <a href="https://www.rockpapershotgun.com/2016/09/09/best-rimworld-mods/" title="Rock, Paper, Shotgun">award</a>-<a href="http://www.pcgamer.com/the-best-rimworld-mods" title="PC-Gamer">winning</a> <a href="http://steamcommunity.com/id/l2032/myworkshopfiles/?appid=294100" title="Steam Workshop">mods</a> for <a href="https://rimworldgame.com/" title="RimWorld">games</a>, and playing around with my Raspberry Pi.</p>
+      <h2>Pleased to meet you!</h2>
+    </div>
+
+    <div id="contacts" class="content blue">
+      <h1>Contact Information</h1>
+      <p class="align-to-bottom">You can reach me in a variety of ways;</p>
+      <div class="row slug blue">
+        <div class="three columns"><a href="#" title="Tel: +31 (0)53 489 4112" class="clickable center"><i class="fa fa-2x fa-phone"></i></a></div>
+        <div class="three columns"><a href="mailto:k.a.kroeze@utwente.nl" title="Work: k.a.kroeze@utwente.nl" class="clickable center"><i class="fa fa-2x fa-envelope"></i></a></div>
+        <div class="three columns"><a href="mailto:karel.kroeze@gmail.com" title="Personal: karel.kroeze@gmail.com" class="clickable center"><i class="fa fa-2x fa-envelope"></i></a></div>
+        <div class="three columns"><a href="#" title="Postal: P.O. Box 217, 7500AE Enschede, The Netherlands" class="clickable center"><i class="fa fa-2x fa-building"></i></a></div>
+      </div>
+      <p class="align-to-bottom">I'm also (occasionally) active on social media. Here's some links;</p>
+      <div class="row slug blue">
+        <div class="three columns"><a href="https://facebook.com/karel.kroeze" title="Facebook" class="clickable center"><i class="fa fa-2x fa-facebook"></i></a></div>
+        <div class="three columns"><a href="https://linkedin.com/in/karelkroeze" title="Linkedin" class="clickable center"><i class="fa fa-2x fa-linkedin"></i></a></div>
+        <div class="three columns"><a href="https://plus.google.com/+KarelKroeze" title="Google Plus" class="clickable center"><i class="fa fa-2x fa-google-plus"></i></a></div>
+        <div class="three columns"><a href="https://github.com/Karel-Kroeze" title="GitHub" class="clickable center"><i class="fa fa-2x fa-github"></i></a></div>
+      </div>    
+    </div>
+
+    <div id="cv" class="content red">
+      <h1>Curriculum Vitae</h1>
+      <h2>Education</h2>
+      <div class="row">
+        <div class="three columns">2013-2015</div>
+        <div class="eight columns">Utrecht University, University of Twente, University Medical Centre Utrecht. MSc Methodology and Statistics in the Behavioural, Biomedical and Social Sciences, research master, cum laude. Average grade: 8.3/10 , 4.0 GPA</div>
+        <div class="one column"><i class="fa fa-fw fa-document-pdf"></i></div>
+      </div>
+      <div class="row">
+        <div class="three columns">2007-2013</div>
+        <div class="eight columns">University of Twente. BA European Studies. Average grade: 8.0/10</div>
+        <div class="one column"><i class="fa fa-fw fa-document-pdf"></i></div>
+      </div>
+      <h2>Work experience</h2>
+      <div class="row">
+        <div class="three columns">2016-2020</div>
+        <div class="eight columns">University of Twente. PhD Candidate at the departments of Instructional Technology (IST) and Research Methodology, Measurement and Data Analysis (OMD).</div>
+        <div class="one column"><i class="fa fa-fw fa-document-pdf"></i></div>
+      </div>
+      <div class="row">
+        <div class="three columns">2015-2016</div>
+        <div class="eight columns">University of Twente Researcher at the department of Research Methodology, Measurement and Data Analysis (OMD), faculty of Behavioural, Management and Social Sciences (.66 fte). <br />Researcher / Consultant at Datalab, institute for Innovation and Governance Studies (.34 fte). </div>
+        <div class="one column"><i class="fa fa-fw fa-document-pdf"></i></div>
+      </div>
+    </div>
+
+    <div id="publications" class="content orange">
+      <h1>Publications</h1>
+    </div>
+
+    <div id="projects" class="content green">
+      <h1>Hobbies &amp; Projects</h1>
+    </div>
+  </span>
+
+  <!-- non-essential scripts -->
+  <script src="http://code.jquery.com/jquery-1.10.0.min.js"></script>
+  <script src="js/tooltipster.bundle.min.js"></script>
+  <script src="js/tooltipster-follower.min.js"></script>
+  <script src="js/tooltips.js"></script>
+</body>
+</html>
